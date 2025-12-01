@@ -20,5 +20,5 @@ if [[ -n "$(ls -A /tmp/.X11-unix 2>/dev/null)" ]]; then
   exec zypak-wrapper /app/extra/QQ/qq "${FLAGS[@]}" "$@"
 else
   echo "X11 socket is not available, using Wayland + Xvfb..."
-  exec xvfb-run -a zypak-wrapper /app/extra/QQ/qq "${FLAGS[@]}" "$@"
+  exec xvfb-run -a clipsync.py zypak-wrapper /app/extra/QQ/qq "${FLAGS[@]}" "$@"
 fi
